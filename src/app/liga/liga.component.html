@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="display-4">
+        <img src="{{ liga.imagem }}" width="150px" height="150px">  
+        {{ liga.nome }}
+    </h1>
+                  
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Time</th>
+                <th>Cartola</th>
+                <th>Total de pontos no campeonato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let time of times; index as i">
+                <td>{{ i+1 }}º</td>
+                <td><img src="{{ time.escudo }}" width="45px" height="50px"> {{ time.time }}</td>
+                <td>{{ time.nomeCartola }}</td>
+                <td>{{ time.pontosCampeonato }}</td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+
