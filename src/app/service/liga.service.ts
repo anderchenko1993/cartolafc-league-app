@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,9 @@ export class LigaService {
 
   constructor(private http: HttpClient) { }
 
-  getTimes() {
-    return this.http.get(this.API_URL);
+  getLiga(id) {
+    let params = new HttpParams().set("id", id);
+    return this.http.get(this.API_URL, {params: params});
   }
 
 }

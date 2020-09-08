@@ -1,8 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.jumbotron {
-    background-color: white;
-    margin: 0;
-    padding: 10px;
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table tbody tr:nth-child(-n+3) {
+    background-color: #00cc44 !important;
+} 
+
+.pontuacao {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.container-loading {
+    left: 50%;
+    top: 30%;
+    margin-left: -125px; /* Metade do valor da Largura */
+    margin-top: -50px; /* Metade da valor da Altura */
+    position: absolute;
+}
+
+.spinner-border {
+    margin-top: 20px;
+    width: 15rem;
+    height: 15rem;
 }

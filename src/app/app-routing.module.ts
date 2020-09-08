@@ -4,7 +4,7 @@ import { LigaComponent } from './liga/liga.component';
 
 
 const routes: Routes = [
-  {path: 'liga', component: LigaComponent},
+  {path: 'liga/:id', component: LigaComponent},
 ];
 
 @NgModule({
